@@ -8,9 +8,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'web': '1200px'
+      },
       colors: {
-        'byzantine-blue': '#054ADA'
-      }
+        
+        'byzantine-blue': '#054ADA',
+        'text-blue': '#AFC8FD',
+        'persian-blue': '#003FC1',
+      },
     },
   },
   plugins: [],

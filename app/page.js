@@ -1,4 +1,5 @@
 import Hero from "@/sections/Landing/Hero";
+import Steps from "@/components/Steps";
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <main className="text-white">
       <Hero />
+      <Steps />
     </main>
   )
 }

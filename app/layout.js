@@ -15,7 +15,7 @@ export const manrope = Manrope({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={manrope.className}>
+      <body className={archivo.className}>
         <Navbar />
         {children}
       </body>

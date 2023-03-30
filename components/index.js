@@ -1,4 +1,9 @@
 import Navbar from "./Navbar";
+import Stats from "./Stats";
+import Steps from "./Steps";
+
 export {
-  Navbar
+  Navbar,
+  Stats,
+  Steps
 }
