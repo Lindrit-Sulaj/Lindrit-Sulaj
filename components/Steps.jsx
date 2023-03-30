@@ -22,7 +22,7 @@ export default function Steps() {
         whileInView={{ height: 32 }}
         className="w-1/4 h-8 bg-persian-blue"></motion.div>
       <motion.div i
-        nitial={{ height: 0 }}
+        initial={{ height: 0 }}
         whileInView={{ height: 16 }}
         className="w-1/4 bg-persian-blue"></motion.div>
     </motion.div>
