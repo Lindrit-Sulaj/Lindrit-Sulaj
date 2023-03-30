@@ -1,4 +1,4 @@
-import Hero from "@/sections/Landing/Hero"
+import Hero from "@/sections/Landing/Hero";
 
 export const metadata = {
   title: 'Create Next App',

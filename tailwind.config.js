@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'rich-black': '#050816'
+        'byzantine-blue': '#054ADA'
       }
     },
   },

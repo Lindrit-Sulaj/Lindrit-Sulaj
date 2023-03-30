@@ -9,12 +9,3 @@
 img {
   max-width: 100%;
 }
-
-.hero {
-  background-image: url('https://ik.imagekit.io/0s9lwb2yr/Developer_Portfolio_-_Lindrit_Sulaj/herobg_s0TPGQUU6K.png?updatedAt=1680103281640');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
-}
