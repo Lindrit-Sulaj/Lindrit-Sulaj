@@ -12,10 +12,11 @@ module.exports = {
         'web': '1200px'
       },
       colors: {
-        
+        'gold': '#D98F04',
         'byzantine-blue': '#054ADA',
         'text-blue': '#AFC8FD',
         'persian-blue': '#003FC1',
+        'gold-hover': '#B87904'
       },
     },
   },
