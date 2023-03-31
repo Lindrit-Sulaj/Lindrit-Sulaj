@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Stats() {
   return (
-    <div className='w-full bg-persian-blue py-6 md:py-10 px-6 lg:px-6 xl:px-0'>
+    <div className='w-full text-white bg-persian-blue py-6 md:py-10 px-6 lg:px-6 xl:px-0'>
       <div className="max-w-screen-web mx-auto flex flex-wrap gap-x-20 gap-y-10">
         <div className=''>
           <h4 className='text-2xl md:text-[32px] font-semibold'>12+</h4>
