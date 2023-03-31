@@ -20,7 +20,7 @@ export default function Steps({ from = "top", background, color }) {
           key={height}
           style={{ background: color }}
           viewport={{ once: true }}
-          whileInView={{ height }}
+          whileInView={{ height, transition: { delay: .3 } }}
           initial={{ height: 0 }}
           className="w-1/4">
 
