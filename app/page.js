@@ -1,5 +1,6 @@
 import Hero from "@/sections/Landing/Hero";
 import About from "@/sections/Landing/About";
+import Skills from "@/sections/Landing/Skills";
 
 export const metadata = {
   title: 'Lindrit Sulaj | Web Developer',
@@ -11,7 +12,7 @@ export default function Home() {
     <main className="">
       <Hero />
       <About />
-      <div className="h-[200px] bg-black"></div>
+      <Skills />
     </main>
   )
 }

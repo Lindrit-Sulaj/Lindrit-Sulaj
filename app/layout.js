@@ -21,6 +21,9 @@ export default function RootLayout({ children }) {
         <Script src="https://kit.fontawesome.com/72aeedc907.js" crossorigin="anonymous" />
         {children}
       </body>
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
     </html>
   )
 }

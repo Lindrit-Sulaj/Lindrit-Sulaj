@@ -4,7 +4,7 @@ import { Steps } from '@/components';
 export default function About() {
   return (
     <section>
-      <div className='max-w-screen-web mx-auto py-20 md:py-32 px-6 md:px-10 lg:px-6 xl:px-0 flex justify-around flex-wrap md:flex-nowrap gap-x-10 gap-y-14 items-center'>
+      <div className='max-w-screen-web mx-auto py-20 md:py-32 px-6 md:px-10 lg:px-6 xl:px-0 flex md:justify-between flex-wrap md:flex-nowrap gap-x-10 gap-y-14 items-center'>
         <div className='w-full md:w-1/2'>
           <h2 className='text-3xl md:text-4xl lg:text-[44px] font-semibold mt-4'>About Me</h2>
           <p className='text-lg mt-6 text-neutral-600'>Hi there, I'm a 14-year-old web developer based in Kosovo. I discovered my passion for programming two years ago and have been working tirelessly to improve my skills ever since. In my free time I like to create visually stunning websites.</p>
@@ -19,10 +19,10 @@ export default function About() {
             <p><i className="fa-solid fa-caret-right text-byzantine-blue text-[12px] mr-2"></i>Framer Motion</p>
           </div>
         </div>
-        <img className='w-full md:w-1/2 max-w-[400px]' src="https://ik.imagekit.io/0s9lwb2yr/Developer_Portfolio_-_Lindrit_Sulaj/Images/Lindrit_Sulaj_Insta_pic_uSV5ys5YB.jpg?updatedAt=1680287577356" />
+        <img className='w-[55%] md:w-1/2 max-w-[340px]' src="https://ik.imagekit.io/0s9lwb2yr/Developer_Portfolio_-_Lindrit_Sulaj/Images/Lindrit_Sulaj_Insta_pic_uSV5ys5YB.jpg?updatedAt=1680287577356" />
       </div>
 
-      <Steps from="bottom" background={"white"} color="black" />
+      <Steps from="bottom" background={"white"} color="rgb(10 10 10)" />
     </section>
   )
 }
