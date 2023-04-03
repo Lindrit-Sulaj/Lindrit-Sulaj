@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Steps } from '@/components';
 
 const skills = [
   {
@@ -43,7 +44,7 @@ const skills = [
 export default function Skills() {
   return (
     <section className='bg-neutral-950 text-white'>
-      <div className='max-w-screen-web mx-auto py-10 md:py-16 px-6 md:px-10 lg:px-6 xl:px-0'>
+      <div className='max-w-screen-web mx-auto py-10 md:py-16 px-6 lg:py-20 md:px-10 lg:px-6 xl:px-0'>
         <h2 className='text-3xl md:text-4xl lg:text-[44px] font-semibold'>My skills</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 gap-y-12 mt-12">
@@ -62,6 +63,7 @@ export default function Skills() {
           )) }
         </div>
       </div>
+      <Steps from="top" background={"rgb(5 74 218)"} color="rgb(10 10 10)" />
     </section>
   )
 }

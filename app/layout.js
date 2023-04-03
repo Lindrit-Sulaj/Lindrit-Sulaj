@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         {children}
       </body>
 
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+      <link precedence="default" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
 
     </html>
   )
