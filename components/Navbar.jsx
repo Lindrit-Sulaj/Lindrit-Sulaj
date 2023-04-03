@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isOpened, setIsOpened] = useState(false);
 
   return (
-    <nav className='h-[70px] lg:h-[80px] fixed top-0 bg-persian-blue md:bg-byzantine-blue w-full'>
+    <nav className='h-[70px] lg:h-[80px] absolute top-0 bg-persian-blue md:bg-byzantine-blue w-full'>
       <div className='container mx-auto px-6 flex items-center justify-between h-full'>
         <img src="https://ik.imagekit.io/0s9lwb2yr/Developer_Portfolio_-_Lindrit_Sulaj/Images/Logo_-_Without_removed_bg-removebg-preview_tb2PaP98M.png?updatedAt=1680105709945" alt="Logo" className='h-[30px]' />
 
