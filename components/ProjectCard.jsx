@@ -15,9 +15,9 @@ export default function ProjectCard({
   techStack
 }) {
   return (
-    <div className='border-solid border-[1px] border-blue-600 bg-persian-blue flex flex-col p-6'>
+    <div className='border-solid border-[1px] border-blue-600 bg-persian-blue flex flex-col p-6 hover:bg-blue-800'>
       <div className='flex justify-between items-center'>
-        <i className="fa-regular fa-folder text-3xl"></i>
+        <i className="fa-regular fa-folder text-3xl text-gold"></i>
         <div className='flex gap-5 text-lg'>
           <a href={source}>
             <i className="fa-brands fa-github"></i>

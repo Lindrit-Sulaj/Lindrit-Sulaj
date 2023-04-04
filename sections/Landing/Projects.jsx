@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProjectCard } from '@/components'
+import { ProjectCard, Steps } from '@/components'
 
 export default function Projects() {
   return (
@@ -41,11 +41,11 @@ export default function Projects() {
           <ProjectCard
             name="Traveler"
             live="https://traveler-ls.netlify.app"
-            description="A website where you can see the latest and most popular news from multiple sources for different categories."
+            description="A landing page for a traveling agency, where you can get more information about the company."
             techStack={["Next", "React", "Tailwind"]} />
         </div>
       </div>
-
+      <Steps from="top" background={"rgb(10 10 10)"} color="rgb(5 74 218)" />
     </section>
   )
 }
