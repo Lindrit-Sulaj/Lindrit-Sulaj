@@ -3,6 +3,7 @@ import About from "@/sections/Landing/About";
 import Skills from "@/sections/Landing/Skills";
 import Projects from "@/sections/Landing/Projects";
 import Blog from "@/sections/Landing/Blog";
+import Contact from "@/sections/Landing/Contact";
 
 export const metadata = {
   title: 'Lindrit Sulaj | Web Developer',
@@ -17,6 +18,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Blog />
+      <Contact />
     </main>
   )
 }
