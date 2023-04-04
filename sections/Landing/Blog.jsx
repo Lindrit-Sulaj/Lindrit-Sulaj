@@ -31,10 +31,10 @@ export default function Blog() {
 
 const Article = ({ category, title, description, date, minutesToRead, color }) => {
   return (
-    <div style={{ borderColor: color }} className='bg-neutral-950 px-6 border-solid border-l-[3px]'>
+    <div style={{ borderColor: color }} className='bg-neutral-950 pl-4 pr-0 md:px-6 border-solid border-l-[3px]'>
       <p className={`${sourceSans.className} font-semibold text-gold tracking-wider uppercase text-sm`}>{category}</p>
       <h6 className='text-xl md:text-2xl font-medium mt-3 mb-3 cursor-pointer'>{title}</h6>
-      <p className='text-neutral-300 max-w-lg'>{description}</p>
+      <p className='text-neutral-300'>{description}</p>
       <div className='flex gap-4 mt-4'>
         <p>{date}</p>
         -

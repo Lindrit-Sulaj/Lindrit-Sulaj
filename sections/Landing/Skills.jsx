@@ -51,7 +51,7 @@ export default function Skills() {
           { skills.map(skill => (
             <div key={skill.name}>
               <h4 className='font-semibold text-[22px]'>{skill.name}</h4>
-              <p className='mt-2 text-neutral-300 text-lg max-w-lg'>{skill.description}</p>
+              <p className='mt-2 text-neutral-300 text-[17px] max-w-lg'>{skill.description}</p>
               <div className={`flex items-center gap-2 mt-4 text-[22px] text-neutral-400 ${skill.image && "mt-2"}`}>
                 {/* <span className='text-base'>Technologies:</span> */}
                 { skill?.icons?.map(icon => (

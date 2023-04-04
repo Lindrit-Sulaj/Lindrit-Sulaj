@@ -29,7 +29,7 @@ export default function ProjectCard({
       </div> 
 
       <h5 className='text-2xl mt-6 font-medium'>{name}</h5>
-      <p className='text-lg mt-4 mb-5 text-blue-300'>{description}</p>
+      <p className='text-[17px] mt-4 mb-5 text-blue-300'>{description}</p>
 
       <div className='flex gap-3 mt-auto overflow-hidden'>
         { techStack.map(tech => (

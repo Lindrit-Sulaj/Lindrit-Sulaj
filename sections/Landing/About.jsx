@@ -8,7 +8,7 @@ export default function About() {
         <div className='w-full md:w-1/2'>
           <h2 className='text-3xl md:text-4xl lg:text-[44px] font-semibold mt-4'>About Me</h2>
           <p className='text-lg mt-6 text-neutral-600'>Hi there, I'm a 14-year-old web developer based in Kosovo. I discovered my passion for programming two years ago and have been working tirelessly to improve my skills ever since. In my free time I like to create visually stunning websites.</p>
-          <p className='text-lg mt-3 text-neutral-600'>I'm proficient in a number of languages and frameworks. While I may be young, I am dedicated, hardworking, and committed to delivering exceptional web development solutions. So if you're looking for a talented and passionate web developer to bring your ideas to life, I'd love to hear from you!</p>
+          <p className='text-[17px] mt-3 text-neutral-600'>I'm proficient in a number of languages and frameworks. While I may be young, I am dedicated, hardworking, and committed to delivering exceptional web development solutions. So if you're looking for a talented and passionate web developer to bring your ideas to life, I'd love to hear from you!</p>
           <p className='text-lg mt-6 text-neutral-600'>Here are a few technologies I've been working with recently:</p>
           <div className="inline-grid gap-x-4 gap-y-1 grid-cols-2 mt-4 text-persian-blue font-medium">
             <p><i className="fa-solid fa-caret-right text-[12px] text-byzantine-blue mr-2"></i>Javascript</p>
