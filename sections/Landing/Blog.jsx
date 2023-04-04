@@ -1,6 +1,7 @@
 import React from 'react';
 import { Source_Sans_Pro } from 'next/font/google';
 import { Steps } from '@/components';
+import Link from 'next/link';
 
 const sourceSans = Source_Sans_Pro({
   subsets: ['latin'],
@@ -22,7 +23,7 @@ export default function Blog() {
             <Article key={article.title} {...article}/>
           ))}
         </div>
-        
+        <Link href="/blog" className='mt-12 text-lg bg-byzantine-blue inline-block px-5 py-2 hover:bg-persian-blue'>Go to blog</Link>
       </div>
       <Steps from="top" color="rgb(10 10 10)" background="white" />
     </section>

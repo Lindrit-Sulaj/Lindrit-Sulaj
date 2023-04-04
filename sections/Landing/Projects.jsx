@@ -1,13 +1,18 @@
 import React from 'react'
 import { ProjectCard, Steps } from '@/components'
+import Link from 'next/link'
 
 export default function Projects() {
   return (
     <section className='bg-byzantine-blue text-white'>
       <div className="max-w-screen-web mx-auto py-10 md:py-20 px-6 md:px-10 lg:px-6 xl:px-0">
-        <h2 className='text-3xl md:text-4xl lg:text-[44px] font-semibold'>Projects</h2>
-        <p className='mt-2 text-blue-200 text-lg'>Here are some things I've built</p>
-
+        <div className='flex justify-between items-center gap-6 flex-wrap'>
+          <div>
+            <h2 className='text-3xl md:text-4xl lg:text-[44px] font-semibold'>Projects</h2>
+            <p className='mt-2 text-blue-200 text-lg'>Here are some things I've built</p>
+          </div>
+          <Link href="/projects" className='px-4 text-lg font-medium hidden md:block'>View all <i className="fa-solid fa-arrow-right-long ml-3"></i></Link>
+        </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6'>
           <ProjectCard
             name="Digio"
@@ -44,6 +49,7 @@ export default function Projects() {
             description="A landing page for a traveling agency, where you can get more information about the company."
             techStack={["Next", "React", "Tailwind"]} />
         </div>
+        <Link href="/projects" className='px-4 text-lg font-medium block mt-6 md:hidden'>View all <i className="fa-solid fa-arrow-right-long ml-3"></i></Link>
       </div>
       <Steps from="top" background={"rgb(10 10 10)"} color="rgb(5 74 218)" />
     </section>
