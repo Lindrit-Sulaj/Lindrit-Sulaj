@@ -1,5 +1,5 @@
 import './globals.css';
-import { Navbar } from '@/components';
+import { Navbar, Footer } from '@/components';
 import { Archivo, Manrope } from 'next/font/google'
 import Script from 'next/script';
 
@@ -18,8 +18,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={archivo.className}>
         <Navbar />
-        <Script src="https://kit.fontawesome.com/72aeedc907.js" crossorigin="anonymous" />
+        
         {children}
+        <Footer />
+        <Script src="https://kit.fontawesome.com/72aeedc907.js" crossorigin="anonymous" />
       </body>
 
       <link precedence="default" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />

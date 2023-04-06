@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <nav className='h-[70px] lg:h-[80px] absolute top-0 bg-persian-blue md:bg-byzantine-blue w-full'>
       <div className='container mx-auto px-6 flex items-center justify-between h-full'>
-        <img src="https://ik.imagekit.io/0s9lwb2yr/Developer_Portfolio_-_Lindrit_Sulaj/Images/Logo_-_Without_removed_bg-removebg-preview_tb2PaP98M.png?updatedAt=1680105709945" alt="Logo" className='h-[30px]' />
+        <img src="https://ik.imagekit.io/0s9lwb2yr/Developer_Portfolio_-_Lindrit_Sulaj/Images/Logo_-_Without_removed_bg-fotor-bg-remover-2023040614184_VtwxdcMD16.png?updatedAt=1680783541653" alt="Logo" className='h-[30px]' />
 
         <ul className='hidden md:flex items-center gap-6 text-lg text-blue-300 font-medium'>
           <li className=' hover:text-blue-100'><Link href="#about">About</Link></li>
