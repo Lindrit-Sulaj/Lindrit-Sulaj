@@ -12,7 +12,7 @@ export default function Footer() {
           <a href="https://github.com/Lindrit-Sulaj" className='w-[50px] h-[50px] rounded-md text-[22px] border-solid border-[2px] border-blue-500 flex justify-center items-center hover:bg-byzantine-blue transition-all'><i className="fa-brands fa-github"></i></a>
         </div>
         <p className="text-center mt-5 text-blue-400">Made with 
-            <i class="devicon-nextjs-original ml-2"></i>
+            <i className="devicon-nextjs-original ml-2"></i>
           </p>
       </div>
     </footer>

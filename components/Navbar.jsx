@@ -11,12 +11,14 @@ export default function Navbar() {
   return (
     <nav className='h-[70px] lg:h-[80px] absolute top-0 bg-persian-blue md:bg-byzantine-blue w-full'>
       <div className='container mx-auto px-6 flex items-center justify-between h-full'>
-        <img src="https://ik.imagekit.io/0s9lwb2yr/Developer_Portfolio_-_Lindrit_Sulaj/Images/Logo_-_Without_removed_bg-fotor-bg-remover-2023040614184_VtwxdcMD16.png?updatedAt=1680783541653" alt="Logo" className='h-[30px]' />
+        <Link href="/">
+          <img src="https://ik.imagekit.io/0s9lwb2yr/Developer_Portfolio_-_Lindrit_Sulaj/Images/Logo_-_Without_removed_bg-fotor-bg-remover-2023040614184_VtwxdcMD16.png?updatedAt=1680783541653" alt="Logo" className='h-[30px]' />
+        </Link>
 
         <ul className='hidden md:flex items-center gap-6 text-lg text-blue-300 font-medium'>
           <li className=' hover:text-blue-100'><Link href="#about">About</Link></li>
           <li className=' hover:text-blue-100'><Link href="#projects">Projects</Link></li>
-          <li className=' hover:text-blue-100'><Link href="#blog">Blog</Link></li>
+          <li className=' hover:text-blue-100'><Link href="/blog">Blog</Link></li>
           <button className='border-blue-500 border-solid border-[2px] text-neutral-200 px-3 py-[6px] hover:border-orange-400 hover:text-orange-200'>Get in Touch</button>
         </ul>
 
