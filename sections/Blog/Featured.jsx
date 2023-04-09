@@ -51,10 +51,10 @@ export default function Featured() {
         <div>
           <h2 className={`text-lg font-semibold tracking-wider text-persian-blue uppercase ${sourceSans.className}`}>Top Categories</h2>
           <div className='flex gap-2 flex-wrap mt-4'>
-            <button className='bg-sky-200 transition-all hover:bg-sky-300 px-3 py-1 rounded-lg'>React</button>
-            <button className='bg-sky-200 transition-all hover:bg-sky-300 px-3 py-1 rounded-lg'>Next.js</button>
-            <button className='bg-sky-200 transition-all hover:bg-sky-300 px-3 py-1 rounded-lg'>Performance</button>
-            <button className='bg-sky-200 transition-all hover:bg-sky-300 px-3 py-1 rounded-lg'>Javascript</button>
+            <button className='bg-sky-200 transition-all hover:bg-sky-300 px-3 py-1 rounded-md'>React</button>
+            <button className='bg-sky-200 transition-all hover:bg-sky-300 px-3 py-1 rounded-md'>Next.js</button>
+            <button className='bg-sky-200 transition-all hover:bg-sky-300 px-3 py-1 rounded-md'>Performance</button>
+            <button className='bg-sky-200 transition-all hover:bg-sky-300 px-3 py-1 rounded-md'>Javascript</button>
           </div>
         </div>
         <div className='mt-10 md:hidden lg:block'>
