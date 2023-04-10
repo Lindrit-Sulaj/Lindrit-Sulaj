@@ -3,7 +3,14 @@ import { groq } from "next-sanity";
 
 export async function getAllArticles() {
   return client.fetch(
-    groq`*[_type == "post"]`
+    groq`*[_type == "post"]{
+      title,
+      description,
+      "slug": slug.current,
+      categories->,
+      _createdAt,
+      _updatedAt
+    }`
   )
 }
 
@@ -14,5 +21,14 @@ export async function getArticle(slug) {
       _createdAt,
       title
     }`, { slug }
+  )
+}
+
+export async function getCategories() {
+  return client.fetch(
+    groq`*[_type == "category"]{
+      title,
+      description
+    }`
   )
 }

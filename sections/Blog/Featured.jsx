@@ -1,5 +1,7 @@
 import React from 'react'
 import { Source_Sans_Pro } from 'next/font/google'
+import { getAllArticles, getCategories } from '@/sanity/utils';
+import Link from 'next/link';
 
 const sourceSans = Source_Sans_Pro({
   subsets: ['latin'],
@@ -7,54 +9,29 @@ const sourceSans = Source_Sans_Pro({
   weight: ['200', '300', '400', '600', '700', '900']
 })
 
-export default function Featured() {
+export default async function Featured() {
+  const allArticles = await getAllArticles();
+  const categories = await getCategories();
+
   return (
     <section className='max-w-screen-web mx-auto py-10 md:py-20 px-6 md:px-10 lg:px-6 xl:px-0 min-h-screen flex flex-wrap md:flex-nowrap gap-8'>
       <div className='w-full md:w-3/4 '>
         <h2 className={`text-lg font-semibold tracking-wider text-persian-blue uppercase ${sourceSans.className}`}>Recently Published</h2>
-        <article className='pt-3 pb-2 mt-4'>
-          <h3 className='text-[21px] font-medium'>The End of Front-End Development</h3>
-          <p className='max-w-[720px] mt-3 text-[16.5px] leading-7 text-neutral-600'>Large language models like GPT-4 are becoming increasingly capable, at an alarming rate. Within a couple of years, we won't need developers any more!Or at least, that's the narrative going viral on Twitter. I'm much more optimistic about what these AI advancements mean for the future of software development.
-          </p>
-          <button className='mt-4 font-medium text-[17px]'>Read more</button>
-        </article>
-        <hr className='h-[1px] my-4 bg-neutral-200 border-none' />
-        <article className='pt-3 pb-2'>
-          <h3 className='text-[21px] font-medium'>The End of Front-End Development</h3>
-          <p className='max-w-[720px] mt-3 text-[16.5px] leading-7 text-neutral-600'>Large language models like GPT-4 are becoming increasingly capable, at an alarming rate. Within a couple of years, we won't need developers any more!Or at least, that's the narrative going viral on Twitter. I'm much more optimistic about what these AI advancements mean for the future of software development.
-          </p>
-          <button className='mt-4 font-medium text-[17px]'>Read more</button>
-        </article>
-        <hr className='h-[1px] my-4 bg-neutral-200 border-none' />
-        <article className='pt-3 pb-2'>
-          <h3 className='text-[21px] font-medium'>The End of Front-End Development</h3>
-          <p className='max-w-[720px] mt-3 text-[16.5px] leading-7 text-neutral-600'>Large language models like GPT-4 are becoming increasingly capable, at an alarming rate. Within a couple of years, we won't need developers any more!Or at least, that's the narrative going viral on Twitter. I'm much more optimistic about what these AI advancements mean for the future of software development.
-          </p>
-          <button className='mt-4 font-medium text-[17px]'>Read more</button>
-        </article>
-        <hr className='h-[1px] my-4 bg-neutral-200 border-none' />
-        <article className='pt-3 pb-2'>
-          <h3 className='text-[21px] font-medium'>The End of Front-End Development</h3>
-          <p className='max-w-[720px] mt-3 text-[16.5px] leading-7 text-neutral-600'>Large language models like GPT-4 are becoming increasingly capable, at an alarming rate. Within a couple of years, we won't need developers any more!Or at least, that's the narrative going viral on Twitter. I'm much more optimistic about what these AI advancements mean for the future of software development.
-          </p>
-          <button className='mt-4 font-medium text-[17px]'>Read more</button>
-        </article>
-        <hr className='h-[1px] my-4 bg-neutral-200 border-none' />
-        <article className='pt-3 pb-2'>
-          <h3 className='text-[21px] font-medium'>The End of Front-End Development</h3>
-          <p className='max-w-[720px] mt-3 text-[16.5px] leading-7 text-neutral-600'>Large language models like GPT-4 are becoming increasingly capable, at an alarming rate. Within a couple of years, we won't need developers any more!Or at least, that's the narrative going viral on Twitter. I'm much more optimistic about what these AI advancements mean for the future of software development.
-          </p>
-          <button className='mt-4 font-medium text-[17px]'>Read more</button>
-        </article>
+        <div className='mt-8'>
+          {
+            allArticles.map(article => (
+              <Article key={article.slug} {...article} />
+            ))
+          }
+        </div>
       </div>
       <div className='w-full md:w-1/4'>
         <div>
           <h2 className={`text-lg font-semibold tracking-wider text-persian-blue uppercase ${sourceSans.className}`}>Top Categories</h2>
           <div className='flex gap-2 flex-wrap mt-4'>
-            <button className='bg-sky-200 transition-all hover:bg-sky-300 px-3 py-1 rounded-md'>React</button>
-            <button className='bg-sky-200 transition-all hover:bg-sky-300 px-3 py-1 rounded-md'>Next.js</button>
-            <button className='bg-sky-200 transition-all hover:bg-sky-300 px-3 py-1 rounded-md'>Performance</button>
-            <button className='bg-sky-200 transition-all hover:bg-sky-300 px-3 py-1 rounded-md'>Javascript</button>
+            {categories.map(category => (
+              <Link className='border-solid border-[2px] border-neutral-300 px-3 py-[6px] hover:border-gold hover:text-gold-hover hover:font-medium' href={`/category/${category.title.toLowerCase()}`}>{category.title}</Link>
+            ))}
           </div>
         </div>
         <div className='mt-10 md:hidden lg:block'>
@@ -85,13 +62,13 @@ export default function Featured() {
   )
 }
 
-const Article = () => {
+const Article = ({ title, description, slug }) => {
   return (
-    <article className='pt-3 pb-2'>
-      <h3 className='text-[21px] font-medium'>The End of Front-End Development</h3>
-      <p className='max-w-[720px] mt-3 text-[16.5px] leading-7 text-neutral-600'>Large language models like GPT-4 are becoming increasingly capable, at an alarming rate. Within a couple of years, we won't need developers any more!Or at least, that's the narrative going viral on Twitter. I'm much more optimistic about what these AI advancements mean for the future of software development.
+    <article className='py-4 my-5 border-solid border-b-[1px] border-b-neutral-300'>
+      <h3 className='text-[21px] font-medium'>{title}</h3>
+      <p className='max-w-[720px] mt-3 text-[16.5px] leading-7 text-neutral-600'>{description}
       </p>
-      <button className='mt-4 font-medium text-[17px]'>Read more</button>
+      <Link href={`/blog/${slug}`} className='block mt-4 font-medium text-[17px] hover:text-gold'>Read more</Link>
     </article>
   )
 }
