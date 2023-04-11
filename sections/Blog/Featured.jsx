@@ -65,7 +65,7 @@ export default async function Featured() {
 const Article = ({ title, description, slug }) => {
   return (
     <article className='py-4 my-5 border-solid border-b-[1px] border-b-neutral-300'>
-      <h3 className='text-[21px] font-medium'>{title}</h3>
+      <h3 className='text-[19px] md:text-[21px] font-medium'>{title}</h3>
       <p className='max-w-[720px] mt-3 text-[16.5px] leading-7 text-neutral-600'>{description}
       </p>
       <Link href={`/blog/${slug}`} className='block mt-4 font-medium text-[17px] hover:text-gold'>Read more</Link>

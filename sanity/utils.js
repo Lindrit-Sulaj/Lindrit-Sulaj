@@ -19,7 +19,10 @@ export async function getArticle(slug) {
     groq`*[_type == "post" && slug.current == $slug ] {
       body,
       _createdAt,
-      title
+      _updatedAt,
+      description,
+      title,
+      category->{ title, description }
     }`, { slug }
   )
 }
