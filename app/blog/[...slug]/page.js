@@ -18,6 +18,16 @@ const portableTextComponents = {
   }
 }
 
+export async function generateMetadata({ params }) {
+  const res = await getArticle(params.slug[0]);
+  const article = res[0];
+
+  return {
+    title: article.title,
+    description: article.description,
+  }
+}
+
 export default async function ArticlePage({ params }) {
   const article = await getArticle(params.slug[0])
   const {
