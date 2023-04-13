@@ -8,6 +8,7 @@ import Contact from "@/sections/Landing/Contact";
 export const metadata = {
   title: 'Lindrit Sulaj | Web Developer',
   description: "I'm a 14-year-old web developer based in Kosovo. I specialize in building visually stunning and impressive websites using languages and frameworks such as HTML, CSS, SCSS, Tailwind, React, Next, Redux, and Framer Motion.",
+  keywords: ["Web Developer Kosovo", "Lindrit Sulaj", "Front End Developer", "Digital Marketing Kosovo"],
   openGraph: {
     title: 'Lindrit Sulaj | Web Developer',
     description: "I'm a front-end web developer based in Kosovo, with a passion for creating visually stunning websites using the latest and greatest web technologies.",
