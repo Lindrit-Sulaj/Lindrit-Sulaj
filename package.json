@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "^2.0.2",
     "framer-motion": "^10.10.0",
     "next": "13.2.4",
     "next-sanity": "^4.1.6",

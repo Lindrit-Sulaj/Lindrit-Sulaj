@@ -3,7 +3,7 @@ import { Steps } from '@/components';
 
 export default function About() {
   return (
-    <section>
+    <section id="about">
       <div className='max-w-screen-web mx-auto py-20 md:py-32 px-6 md:px-10 lg:px-6 xl:px-0 flex justify-center md:justify-between flex-wrap md:flex-nowrap gap-x-10 gap-y-14 items-center'>
         <div className='w-full md:w-1/2'>
           <h2 className='text-3xl md:text-4xl lg:text-[44px] font-semibold mt-4'>About Me</h2>

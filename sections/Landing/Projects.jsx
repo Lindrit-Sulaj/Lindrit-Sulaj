@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Projects() {
   return (
-    <section className='bg-byzantine-blue text-white'>
+    <section id="projects" className='bg-byzantine-blue text-white'>
       <div className="max-w-screen-web mx-auto py-10 md:py-20 px-6 md:px-10 lg:px-6 xl:px-0">
         <div className='flex justify-between items-center gap-6 flex-wrap'>
           <div>

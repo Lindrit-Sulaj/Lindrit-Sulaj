@@ -27,3 +27,45 @@ img {
 ::-webkit-scrollbar-thumb {
   background: #054ada;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.portable_text h2 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.portable_text p {
+  color: rgb(44, 43, 43)
+}
+
+.portable_text blockquote {
+  border-left: .2rem solid rgb(5 74 218); 
+  padding: .8rem 1.2rem;
+  margin-top: 6px;
+  background-color: rgb(250, 246, 246);
+  color: rgb(20, 20, 20);
+}
+
+.portable_text ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+  margin-left: 6px;
+  color: rgb(44, 43, 43);
+}
+
+.portable_text ul strong {
+  color: rgb(7, 60, 167);
+}
+
+@media (min-width: 768px) {
+  .portable_text h2 {
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 18px;
+  }
+}

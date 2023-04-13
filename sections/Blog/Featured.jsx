@@ -14,10 +14,10 @@ export default async function Featured() {
   const categories = await getCategories();
 
   return (
-    <section className='max-w-screen-web mx-auto py-10 md:py-20 px-6 md:px-10 lg:px-6 xl:px-0 min-h-screen flex flex-wrap md:flex-nowrap gap-8'>
+    <section className='max-w-screen-web mx-auto py-10 md:py-20 px-6 md:px-10 lg:px-6 xl:px-0 min-h-screen flex flex-wrap-reverse md:flex-nowrap gap-8 gap-y-12'>
       <div className='w-full md:w-3/4 '>
         <h2 className={`text-lg font-semibold tracking-wider text-persian-blue uppercase ${sourceSans.className}`}>Recently Published</h2>
-        <div className='mt-8'>
+        <div className='mt-[4px] md:mt-4'>
           {
             allArticles.map(article => (
               <Article key={article.slug} {...article} />
@@ -26,36 +26,11 @@ export default async function Featured() {
         </div>
       </div>
       <div className='w-full md:w-1/4'>
-        <div>
-          <h2 className={`text-lg font-semibold tracking-wider text-persian-blue uppercase ${sourceSans.className}`}>Top Categories</h2>
-          <div className='flex gap-2 flex-wrap mt-4'>
-            {categories.map(category => (
-              <Link className='border-solid border-[2px] border-neutral-300 px-3 py-[6px] hover:border-gold hover:text-gold-hover hover:font-medium' href={`/category/${category.title.toLowerCase()}`}>{category.title}</Link>
-            ))}
-          </div>
-        </div>
-        <div className='mt-10 md:hidden lg:block'>
-          <h2 className={`text-lg font-semibold tracking-wider text-persian-blue uppercase ${sourceSans.className}`}>Best Articles</h2>
-          <div className='flex gap-2 mt-4 items-center text-lg'>
-            <i className="fa-solid fa-caret-right text-byzantine-blue mr-2"></i>
-            <h4 className='font-medium text-neutral-800 text-lg'>Why your business needs a website</h4>
-          </div>
-          <div className='flex gap-2 mt-4 items-center text-lg'>
-            <i className="fa-solid fa-caret-right text-byzantine-blue mr-2"></i>
-            <h4 className='font-medium text-neutral-800 text-lg'>Why your business needs a website</h4>
-          </div>
-          <div className='flex gap-2 mt-4 items-center text-lg'>
-            <i className="fa-solid fa-caret-right text-byzantine-blue mr-2"></i>
-            <h4 className='font-medium text-neutral-800 text-lg'>Why your business needs a website</h4>
-          </div>
-          <div className='flex gap-2 mt-4 items-center text-lg'>
-            <i className="fa-solid fa-caret-right text-byzantine-blue mr-2"></i>
-            <h4 className='font-medium text-neutral-800 text-lg'>Why your business needs a website</h4>
-          </div>
-          <div className='flex gap-2 mt-4 items-center text-lg'>
-            <i className="fa-solid fa-caret-right text-byzantine-blue mr-2"></i>
-            <h4 className='font-medium text-neutral-800 text-lg'>Why your business needs a website</h4>
-          </div>
+        <h2 className={`text-lg font-semibold tracking-wider text-persian-blue uppercase ${sourceSans.className}`}>Top Categories</h2>
+        <div className='flex gap-2 flex-wrap mt-4'>
+          {categories.map(category => (
+            <Link className='border-solid border-[2px] border-neutral-300 px-3 py-[6px] hover:border-gold hover:text-gold-hover hover:font-medium' href={`/category/${category.title.toLowerCase()}`}>{category.title}</Link>
+          ))}
         </div>
       </div>
     </section>

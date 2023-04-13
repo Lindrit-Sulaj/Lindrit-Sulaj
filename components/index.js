@@ -9,5 +9,5 @@ export {
   Stats,
   Steps,
   ProjectCard,
-  Footer
+  Footer,
 }
