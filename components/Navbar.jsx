@@ -57,7 +57,7 @@ function Mobile({ isOpened, setIsOpened }) {
         x: '-100vw'
       }}
 
-      className='fixed top-0 w-full h-screen left-0 bg-persian-blue p-10'>
+      className='fixed top-0 w-[90%] h-screen left-0 bg-persian-blue p-10'>
 
       <div className='flex justify-between items-center'>
         <img src="https://ik.imagekit.io/0s9lwb2yr/Developer_Portfolio_-_Lindrit_Sulaj/Images/Logo_-_Without_removed_bg-removebg-preview_tb2PaP98M.png?updatedAt=1680105709945" alt="Logo" className='h-[30px]' />
@@ -67,10 +67,10 @@ function Mobile({ isOpened, setIsOpened }) {
       </div>
       <ul className='mt-16 text-[22px] text-text-blue flex flex-col items-center gap-y-6'>
         <li>
-          <Link href="#about">About</Link>
+          <a href="#about">About</a>
         </li>
         <li>
-          <Link href="#projects">Projects</Link>
+          <a href="#projects">Projects</a>
         </li>
         <li>
           <Link href="/blog">Blog</Link>
