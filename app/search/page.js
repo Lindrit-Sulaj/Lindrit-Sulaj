@@ -12,7 +12,7 @@ export default async function SearchPage({ searchParams }) {
   const searchResults = await getSearchResults(searchParams.query)
 
   return (
-    <main className="mt-[70px]">
+    <main className="mt-[70px] min-h-screen">
       <div className="bg-byzantine-blue text-white py-10 px-5">
         <div className="container mx-auto flex flex-col justify-center items-center">
           <h2 className="text-lg md:text-xl mb-3 md:mb-5">Search results for:</h2>
