@@ -3,6 +3,7 @@ import Stats from "./Stats";
 import Steps from "./Steps";
 import ProjectCard from "./ProjectCard";
 import Footer from "./Footer";
+import SearchBar from "./SearchBar";
 
 export {
   Navbar,
@@ -10,4 +11,5 @@ export {
   Steps,
   ProjectCard,
   Footer,
+  SearchBar
 }
