@@ -39,3 +39,5 @@ const News = ({ description, id, title }) => {
     </article>
   )
 }
+
+export const dynamic = 'force-dynamic'
