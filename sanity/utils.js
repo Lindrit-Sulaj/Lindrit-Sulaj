@@ -36,13 +36,14 @@ export async function getCategories() {
   )
 }
 
-export async function getCategoryArticles() {
+export async function getCategoryArticles(category) {
   return client.fetch(
-    groq`*[_type == "post" && category->title == "Javascript"]{
+    groq`*[_type == "post" && category->title == $category]{
       title,
       description,
-      "id": slug.current
-    }`
+      "id": slug.current,
+      category->{title, description}
+    }`, { category }
   )
 }
 
@@ -51,7 +52,8 @@ export async function getSearchResults(query) {
     groq`*[_type == "post" && title match $query]{
       title,
       description,
-      "id": slug.current
+      "id": slug.current,
+      category->{title}
     }`, { query: `${query}*` }
   )
 }

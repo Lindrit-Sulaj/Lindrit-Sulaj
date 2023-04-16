@@ -17,7 +17,8 @@ module.exports = {
         'text-blue': '#AFC8FD',
         'persian-blue': '#003FC1',
         'gold-hover': '#B87904',
-        'custom-black': '#0e141b'
+        'custom-black': '#0e141b',
+        'light-blue': '#D7F8FF'
       },
     },
   },
