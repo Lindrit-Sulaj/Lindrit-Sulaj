@@ -15,7 +15,6 @@ export default async function SearchPage({ searchParams }) {
     <main className="mt-[70px] min-h-screen">
       <div className="bg-byzantine-blue text-white py-10 px-5">
         <div className="container mx-auto flex flex-col justify-center items-center">
-          <pre>{JSON.stringify(searchParams, null, 2)}</pre>
           <h2 className="text-lg md:text-xl mb-3 md:mb-5">Search results for:</h2>
           <SearchBar />
           <p className="mt-2 text-text-blue text-lg">{searchResults.length} {searchResults.length === 1 ? 'article' : 'articles'}</p>
