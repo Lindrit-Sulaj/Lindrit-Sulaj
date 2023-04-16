@@ -11,9 +11,11 @@ const sourceSans = Source_Sans_Pro({
 })
 
 const portableTextComponents = {
-  types: {
-    image: ({ value }) => {
-      return <img src={value} />
+  block: {
+    code: ({ value }) => {
+      return <pre className="text-base bg-neutral-100 px-3 py-[2px] max-w-full overflow-auto">
+        {value.children[0].text}
+      </pre>
     }
   }
 }

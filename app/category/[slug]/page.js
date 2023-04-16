@@ -20,7 +20,8 @@ export default async function CategoryPage({ params }) {
         <p className="max-w-2xl text-center mt-4 text-text-blue md:text-lg ">{categoryArticles[0].category.description}</p>
       </header>
 
-      <div className="bg-neutral-100 py-10">
+      <div className="bg-neutral-100 py-10 md:py-20">
+        <p className="max-w-screen-web px-4 md:px-8 mb-4 text-lg md:text-xl text-persian-blue font-medium mx-auto">{categoryArticles.length} {categoryArticles.length === 1 ? "article" : "articles"}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 max-w-screen-web mx-auto px-4 md:px-8">
           {categoryArticles.map(article => (
             <Article key={article.id} {...article} />
