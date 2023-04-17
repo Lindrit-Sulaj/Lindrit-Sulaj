@@ -1,15 +1,28 @@
 import { getCategoryArticles } from "@/sanity/utils";
 import Link from "next/link";
 
-export default async function CategoryPage({ params }) {
-  function capitalize(str) {
-    let result = "";
-    for (let word of str.split(" ")) {
+function capitalize(str) {
+  let result = "";
+  for (let word of str.split("%20")) {
+    if (result.length !== 0) {
+      result += ` ${word[0].toUpperCase() + word.substring(1)}`
+    } else {
       result += word[0].toUpperCase() + word.substring(1);
-    };
-    return result;
-  }
+    }
+  };
+  return result;
+}
 
+export async function generateMetadata({ params }) {
+  const categoryArticles = await getCategoryArticles(capitalize(params.slug));
+
+  return {
+    title: capitalize(params.slug),
+    description: categoryArticles[0].category.description
+  }
+}
+
+export default async function CategoryPage({ params }) {
   const categoryArticles = await getCategoryArticles(capitalize(params.slug));
 
   return (
@@ -22,7 +35,7 @@ export default async function CategoryPage({ params }) {
 
       <div className="bg-neutral-100 py-10 md:py-20">
         <p className="max-w-screen-web px-4 md:px-8 mb-4 text-lg md:text-xl text-persian-blue font-medium mx-auto">{categoryArticles.length} {categoryArticles.length === 1 ? "article" : "articles"}</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 max-w-screen-web mx-auto px-4 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-screen-web mx-auto px-4 md:px-8 gap-8">
           {categoryArticles.map(article => (
             <Article key={article.id} {...article} />
           ))}
