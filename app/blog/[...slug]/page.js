@@ -45,13 +45,13 @@ export default async function ArticlePage({ params }) {
     <main className="mt-[70px]">
       <div className="bg-byzantine-blue">
         <div className="max-w-screen-web mx-auto  pt-10 pb-12 md:pb-20 flex justify-center flex-col items-center px-2 md:px-20 text-white">
-          <p className={`${sourceSans.className} font-semibold tracking-wide uppercase border-solid border-[1px] px-3 py-[6px] border-blue-500`}>{category.title}</p>
-          <h1 className="text-[27px] text-center md:text-3xl leading-10 lg:text-[44px] font-semibold lg:leading-[70px] mt-5 ">{title}</h1>
+          <p className={`${sourceSans.className} font-semibold tracking-wide uppercase border-solid border-[1px] text-sm md:text-base px-3 py-[6px] border-blue-500`}>{category.title}</p>
+          <h1 className="text-[25px] text-center md:text-3xl leading-10 lg:text-[44px] font-semibold lg:leading-[70px] mt-5 ">{title}</h1>
           <p className="mt-3 text-text-blue text-lg">Updated at: {_updatedAt.slice(0, 10)}</p>
         </div>
       </div>
-      <div className="flex gap-10 px-7 py-7 md:px-10 md:py-12 xl:px-0 max-w-screen-web mx-auto">
-        <div className="w-full md:w-[70%] text-lg portable_text">
+      <div className="flex gap-10 px-4 py-6 md:px-10 md:py-12 xl:px-0 max-w-screen-web mx-auto">
+        <div className="w-full md:w-[70%] text-[17px] md:text-lg portable_text">
           <PortableText value={body} components={portableTextComponents} />
         </div>
         <div className="w-[30%] relative hidden md:block">
