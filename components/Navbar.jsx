@@ -17,8 +17,8 @@ export default function Navbar() {
 
         <ul className='hidden md:flex items-center gap-6 text-lg text-blue-300 font-medium'>
           <li className=' hover:text-blue-100'><a href="#about">About</a></li>
-          <li className=' hover:text-blue-100'><a href="#projects">Projects</a></li>
-          <li className=' hover:text-blue-100'><a href="/blog">Blog</a></li>
+          <li className=' hover:text-blue-100'><Link href="/projects">Projects</Link></li>
+          <li className=' hover:text-blue-100'><Link href="/blog">Blog</Link></li>
           <button className='border-blue-500 border-solid border-[2px] text-neutral-200 px-3 py-[6px] hover:border-orange-400 hover:text-orange-200'>Get in Touch</button>
         </ul>
 
@@ -70,7 +70,7 @@ function Mobile({ isOpened, setIsOpened }) {
           <a href="#about">About</a>
         </li>
         <li>
-          <a href="#projects">Projects</a>
+          <Link href="/projects">Projects</Link>
         </li>
         <li>
           <Link href="/blog">Blog</Link>

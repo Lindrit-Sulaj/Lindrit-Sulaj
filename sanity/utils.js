@@ -57,3 +57,15 @@ export async function getSearchResults(query) {
     }`, { query: `${query}*` }
   )
 }
+
+export async function getProjects() {
+  return client.fetch(
+    groq`*[_type == "project"]{
+      title,
+      source,
+      live,
+      description,
+      technologies
+    }`
+  )
+}

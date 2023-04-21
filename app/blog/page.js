@@ -24,8 +24,6 @@ export const metadata = {
 }
 
 export default async function BlogPage() {
-  const allArticles = await getAllArticles();
-
   return (
     <main className="">
       <Hero />
