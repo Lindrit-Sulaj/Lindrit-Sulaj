@@ -25,7 +25,8 @@ export async function generateMetadata({ params }) {
 
   return {
     title: categoryArticles[0].category.title,
-    description: categoryArticles[0].category.description
+    description: categoryArticles[0].category.description,
+    keywords: [`${categoryArticles[0].category.title}`]
   }
 }
 
