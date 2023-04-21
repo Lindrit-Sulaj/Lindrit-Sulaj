@@ -1,9 +1,9 @@
-import { getCategoryArticles } from "@/sanity/utils";
+import { getCategories, getCategoryArticles } from "@/sanity/utils";
 import Link from "next/link";
 
 function capitalize(str) {
   let result = "";
-  for (let word of str.split("%20")) {
+  for (let word of str.split("-")) {
     if (result.length !== 0) {
       result += ` ${word[0].toUpperCase() + word.substring(1)}`
     } else {
@@ -13,17 +13,24 @@ function capitalize(str) {
   return result;
 }
 
+export async function generateStaticParams() {
+  const categories = await getCategories();
+  return categories.map((category) => ({
+    slug: category.slug
+  }))
+}
+
 export async function generateMetadata({ params }) {
-  const categoryArticles = await getCategoryArticles(capitalize(params.slug));
+  const categoryArticles = await getCategoryArticles(params.slug);
 
   return {
-    title: capitalize(params.slug),
+    title: categoryArticles[0].category.title,
     description: categoryArticles[0].category.description
   }
 }
 
 export default async function CategoryPage({ params }) {
-  const categoryArticles = await getCategoryArticles(capitalize(params.slug));
+  const categoryArticles = await getCategoryArticles(params.slug);
 
   return (
     <main className="mt-[70px]">
@@ -54,3 +61,5 @@ const Article = ({ title, description, category, id }) => {
     </div>
   )
 }
+
+export const dynamic = 'force-dynamic'

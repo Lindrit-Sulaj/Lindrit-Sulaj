@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { getArticle } from "@/sanity/utils"
+import { getArticle, getAllArticles } from "@/sanity/utils"
 import { Source_Sans_Pro } from "next/font/google";
 import { Suspense } from "react";
 import { PortableText } from "@portabletext/react";
@@ -18,6 +18,13 @@ const portableTextComponents = {
       </pre>
     }
   }
+}
+
+export async function generateStaticParams() {
+  const articles = await getAllArticles();
+  return articles.map((article) => ({
+    slug: article.slug
+  }))
 }
 
 export async function generateMetadata({ params }) {

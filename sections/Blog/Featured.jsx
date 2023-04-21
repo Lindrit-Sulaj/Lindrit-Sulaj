@@ -29,7 +29,7 @@ export default async function Featured() {
         <h2 className={`text-lg font-semibold tracking-wider text-persian-blue uppercase ${sourceSans.className}`}>Top Categories</h2>
         <div className='flex gap-2 flex-wrap mt-4'>
           {categories.map(category => (
-            <Link className='border-solid border-[2px] border-neutral-300 px-3 py-[6px] hover:border-gold hover:text-gold-hover hover:font-medium' href={`/category/${category.title.toLowerCase()}`}>{category.title}</Link>
+            <Link className='border-solid border-[2px] border-neutral-300 px-3 py-[6px] hover:border-gold hover:text-gold-hover hover:font-medium' href={`/category/${category.slug}`}>{category.title}</Link>
           ))}
         </div>
       </div>

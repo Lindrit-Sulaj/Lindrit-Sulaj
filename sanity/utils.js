@@ -31,14 +31,15 @@ export async function getCategories() {
   return client.fetch(
     groq`*[_type == "category"]{
       title,
-      description
+      description,
+      "slug": slug.current
     }`
   )
 }
 
 export async function getCategoryArticles(category) {
   return client.fetch(
-    groq`*[_type == "post" && category->title == $category]{
+    groq`*[_type == "post" && category->slug.current == $category]{
       title,
       description,
       "id": slug.current,
