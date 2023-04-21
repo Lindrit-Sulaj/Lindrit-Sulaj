@@ -21,7 +21,7 @@ const portableTextComponents = {
 }
 
 export async function generateMetadata({ params }) {
-  const res = await getArticle(params.slug[0]);
+  const res = await getArticle(params.slug);
   const article = res[0];
 
   return {
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ArticlePage({ params }) {
-  const article = await getArticle(params.slug[0])
+  const article = await getArticle(params.slug)
   const {
     _createdAt,
     _updatedAt,
