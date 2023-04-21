@@ -34,7 +34,7 @@ export default async function SearchPage({ searchParams }) {
 export const Article = ({ description, id, title, category }) => {
   return (
     <article className="border-solid border-[1px] flex flex-col items-center border-neutral-100 px-3 py-6">
-      <Link className="px-3 py-1 border-solid border-[1px] hover:border-gold hover:text-gold-hover text-neutral-500 border-neutral-300" href={`/category/${category.title}`}>{category.title}</Link>
+      <Link className="px-3 py-1 border-solid border-[1px] hover:border-gold hover:text-gold-hover text-neutral-500 border-neutral-300" href={`/category/${category.slug}`}>{category.title}</Link>
       <h5 className="text-xl font-medium text-center mt-3">{title}</h5>
       <p className="mt-3 md:text-lg text-neutral-600 text-center max-w-4xl">{description}</p>
       <Link href={`/blog/${id}`} className="md:text-lg inline-block hover:bg-blue-500 mt-4 px-3 py-2 bg-byzantine-blue text-white">View article</Link>

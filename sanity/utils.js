@@ -54,7 +54,7 @@ export async function getSearchResults(query) {
       title,
       description,
       "id": slug.current,
-      category->{title}
+      category->{title, "slug": slug.current}
     }`, { query: `${query}*` }
   )
 }
