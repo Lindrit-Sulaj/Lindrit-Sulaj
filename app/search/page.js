@@ -15,7 +15,9 @@ export default async function SearchPage({ searchParams }) {
     <main className="mt-[70px] min-h-screen">
       <header className="bg-byzantine-blue text-white py-10 px-5">
         <div className="container mx-auto flex flex-col justify-center items-center">
-          <h2 className="text-lg md:text-xl mb-3 md:mb-5">Search results for:</h2>
+          <p className="text-center font-medium text-lg text-blue-300 mb-3">
+            Search /
+          </p>
           <SearchBar />
           <p className="mt-2 text-text-blue text-lg">{searchResults.length} {searchResults.length === 1 ? 'article' : 'articles'}</p>
         </div>

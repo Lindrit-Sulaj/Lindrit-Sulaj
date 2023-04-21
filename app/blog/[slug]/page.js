@@ -53,8 +53,14 @@ export default async function ArticlePage({ params }) {
     <main className="mt-[70px]">
       <div className="bg-byzantine-blue">
         <div className="max-w-screen-web mx-auto  pt-10 pb-12 md:pb-20 flex justify-center flex-col items-center px-2 md:px-20 text-white">
-          <p className={`${sourceSans.className} font-semibold tracking-wide uppercase border-solid border-[1px] text-sm md:text-base px-3 py-[6px] border-blue-500`}>{category.title}</p>
-          <h1 className="text-[25px] text-center md:text-3xl leading-10 lg:text-[44px] font-semibold lg:leading-[70px] mt-5 ">{title}</h1>
+          {/* <p className={`${sourceSans.className} font-semibold tracking-wide uppercase border-solid border-[1px] text-sm md:text-base px-3 py-[6px] border-blue-500`}>{category.title}</p> */}
+          <div className="text-center flex gap-2 font-medium text-lg text-blue-300">
+            <span>Blog</span>
+            <span>/</span>
+            <span>{category.title}</span>
+            <span>/</span>
+          </div>
+          <h1 className="text-[25px] text-center md:text-3xl leading-10 lg:text-[44px] font-semibold lg:leading-[70px] mt-4 ">{title}</h1>
           <p className="mt-3 text-text-blue text-lg">Updated at: {_updatedAt.slice(0, 10)}</p>
         </div>
       </div>
