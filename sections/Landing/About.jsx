@@ -19,7 +19,7 @@ export default function About() {
             <p><i className="fa-solid fa-caret-right text-byzantine-blue text-[12px] mr-2"></i>Framer Motion</p>
           </div>
         </div>
-        <img className='w-[55%] md:w-1/2 max-w-[300px]' src="https://ik.imagekit.io/0s9lwb2yr/Developer_Portfolio_-_Lindrit_Sulaj/Images/Lindrit_Sulaj_Insta_pic_uSV5ys5YB.jpg?updatedAt=1680287577356" />
+        <img className='w-[55%] md:w-1/2 max-w-[300px]' src="https://ik.imagekit.io/0s9lwb2yr/Developer_Portfolio_-_Lindrit_Sulaj/Images/Lindrit_Sulaj_Insta_pic_uSV5ys5YB.jpg?updatedAt=1680287577356" alt="Lindrit Sulaj" />
       </div>
 
       <Steps from="bottom" background={"white"} color="rgb(10 10 10)" />
