@@ -16,7 +16,7 @@ export default async function ProjectsPage() {
     </header>
     <section className="max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8 my-10">
       {projects.map(project => (
-        <Project {...project} />
+        <Project key={project.title} {...project} />
       ))}
     </section>
     <div className="max-w-screen-lg mx-auto flex justify-center my-8 px-4 md:px-8">
