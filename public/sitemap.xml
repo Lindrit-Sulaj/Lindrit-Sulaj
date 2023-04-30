@@ -87,4 +87,14 @@
   <lastmod>2023-04-17T20:20:04+00:00</lastmod>
   <priority>0.60</priority>
 </url>
+<url>
+  <loc>https://www.lindritsulaj.com/projects</loc>
+  <lastmod>2023-04-17T20:20:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lindritsulaj.com/contact</loc>
+  <lastmod>2023-04-17T20:20:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 </urlset>

@@ -3,10 +3,17 @@ import React, { useState } from 'react'
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import useMediaQuery from '@/utils/useMediaQuery';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const breakpoint = useMediaQuery();
   const [isOpened, setIsOpened] = useState(false);
+
+  const router = useRouter();
+
+  const handleGetInTouch = () => {
+    router.push('#contact')
+  }
 
   return (
     <nav className='h-[70px] lg:h-[80px] absolute top-0 bg-persian-blue md:bg-byzantine-blue w-full'>
@@ -16,10 +23,10 @@ export default function Navbar() {
         </Link>
 
         <ul className='hidden md:flex items-center gap-6 text-lg text-blue-300 font-medium'>
-          <li className=' hover:text-blue-100'><a href="#about">About</a></li>
+          <li className=' hover:text-blue-100'><a href="https://github.com/Lindrit-Sulaj">Github</a></li>
           <li className=' hover:text-blue-100'><Link href="/projects">Projects</Link></li>
           <li className=' hover:text-blue-100'><Link href="/blog">Blog</Link></li>
-          <button className='border-blue-500 border-solid border-[2px] text-neutral-200 px-3 py-[6px] hover:border-orange-400 hover:text-orange-200'>Get in Touch</button>
+          <Link href="/contact" className='border-blue-500 border-solid border-[2px] text-neutral-200 px-3 py-[6px] hover:border-orange-400 hover:text-orange-200'>Get in Touch</Link>
         </ul>
 
         <div onClick={() => setIsOpened(true)} className='h-[70%] md:hidden flex flex-col justify-center gap-[4px] cursor-pointer'>
@@ -67,7 +74,7 @@ function Mobile({ isOpened, setIsOpened }) {
       </div>
       <ul className='mt-16 text-[22px] text-text-blue flex flex-col items-center gap-y-6'>
         <li>
-          <a href="#about">About</a>
+          <a href="https://github.com/Lindrit-Sulaj">Github</a>
         </li>
         <li>
           <Link href="/projects">Projects</Link>
@@ -76,7 +83,7 @@ function Mobile({ isOpened, setIsOpened }) {
           <Link href="/blog">Blog</Link>
         </li>
 
-        <button className='border-blue-500 border-solid border-[2px] text-neutral-200 px-4 py-[6px] hover:border-orange-400 hover:text-orange-200'>Get in Touch</button>
+        <button onClick={handleGetInTouch} className='border-blue-500 border-solid border-[2px] text-neutral-200 px-4 py-[6px] hover:border-orange-400 hover:text-orange-200'>Get in Touch</button>
       </ul>
     </motion.div>
   )

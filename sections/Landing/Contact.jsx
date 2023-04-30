@@ -4,7 +4,7 @@ import { Steps } from '@/components';
 
 export default function Contact() {
   return (
-    <section className="">
+    <section className="" id="contact">
       <div className="max-w-screen-lg mx-auto py-14 md:py-16 px-6 lg:py-20 md:px-10 lg:px-6 xl:px-0">
         <h2 className='text-3xl md:text-4xl lg:text-[44px] font-semibold'>Get in touch</h2>
         <p className='text-lg text-neutral-600 mt-4'>Let's craft a standout website that reflects your brand, engages your visitors, and achieves your business goals.</p>
