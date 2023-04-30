@@ -83,7 +83,7 @@ function Mobile({ isOpened, setIsOpened }) {
           <Link href="/blog">Blog</Link>
         </li>
 
-        <button onClick={handleGetInTouch} className='border-blue-500 border-solid border-[2px] text-neutral-200 px-4 py-[6px] hover:border-orange-400 hover:text-orange-200'>Get in Touch</button>
+        <Link href="/contact" className='border-blue-500 border-solid border-[2px] text-neutral-200 px-4 py-[6px] hover:border-orange-400 hover:text-orange-200'>Get in Touch</Link>
       </ul>
     </motion.div>
   )
