@@ -16,9 +16,17 @@ const skills = [
     name: 'Responsive Web Design',
     description: 'Creating websites that look great on any device, from desktop computers to mobile phones',
     icons: [
+      'devicon-html5-plain colored',
       'devicon-css3-plain colored',
-      'devicon-sass-original colored',
       'devicon-tailwindcss-plain colored'
+    ]
+  },
+  {
+    name: 'Redux State Management',
+    description: 'Implementing robust state management solutions using Redux in Next.js applications',
+    icons: [
+      'devicon-redux-original colored',
+      'devicon-react-original colored'
     ]
   },
   {
@@ -30,13 +38,19 @@ const skills = [
     ]
   },
   {
-    name: 'Animated Interactions',
-    description: 'Adding interactive and visually appealing animations to websites and applications to enhance user engagement',
+    name: 'Content Management with Sanity',
+    description: 'Developing efficient content management systems using Sanity as a headless CMS with Next.js',
     icons: [
-      'devicon-css3-plain colored',
-      'devicon-tailwindcss-plain colored'
+      'devicon-nextjs-original',
+      'fa-solid fa-database text-orange-400'
     ],
-    image: 'https://ik.imagekit.io/0s9lwb2yr/Developer_Portfolio_-_Lindrit_Sulaj/Images/My_project__2__2unbArcD3.png?updatedAt=1680451463400'
+  },
+  {
+    name: 'Figma Prototyping',
+    description: "Utilizing Figma's prototyping capabilities to create interactive wireframes and prototypes.",
+    icons: [
+      'devicon-figma-plain colored'
+    ]
   }
 ];
 
@@ -55,9 +69,8 @@ export default function Skills() {
               <div className={`flex items-center gap-2 mt-4 text-[22px] text-neutral-400 ${skill.image && "mt-2"}`}>
                 {/* <span className='text-base'>Technologies:</span> */}
                 { skill?.icons?.map(icon => (
-                  <i className={`${icon} hover:text-blue-400 transition-all cursor-pointer`}></i>
+                  <i className={`${icon} cursor-pointer`}></i>
                 ))}
-                {skill.image && <img className='w-[30px] h-[35px]' src={skill.image}/>}
               </div>
             </div>
           )) }
