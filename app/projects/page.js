@@ -12,7 +12,7 @@ export default async function ProjectsPage() {
   return <main className="mt-[70px]">
     <header className="bg-byzantine-blue text-white pt-10 pb-14 px-6 md:px-20">
       <h1 className="mx-auto text-white text-[27px] text-center md:text-4xl lg:text-[40px] leading-10 font-semibold lg:leading-[70px]">Developer Projects</h1>
-      <p className="text-center mx-auto text-lg md:text-xl text-text-blue mt-3 max-w-xl">Explore my innovative and dynamic projects on my developer portfolio's projects page.</p>
+      <p className="text-center mx-auto text-lg md:text-xl text-text-blue mt-3 max-w-xl">Explore my innovative and dynamic projects featuring different technologies.</p>
     </header>
     <section className="max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8 my-10">
       {projects.map(project => (
