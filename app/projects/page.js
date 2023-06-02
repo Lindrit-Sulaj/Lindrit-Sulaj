@@ -1,5 +1,7 @@
 import { getProjects } from "@/sanity/utils"
 
+export const revalidate = 3600;
+
 export const metadata = {
   title: 'Projects | Lindrit Sulaj',
   description: "Explore my innovative and dynamic projects on my developer portfolio's projects page.",
