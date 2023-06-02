@@ -1,4 +1,5 @@
 import { getProjects } from "@/sanity/utils"
+import { TechnologyIcon } from "@/components";
 
 export const revalidate = 3600;
 
@@ -8,6 +9,18 @@ export const metadata = {
   keywords: ['Developer Projects Kosovo', 'Web Projects', 'Websites Kosovo']
 }
 
+const technologies = [
+  'devicon-html5-plain',
+  'devicon-css3-plain',
+  'devicon-javascript-plain',
+  'devicon-react-plain',
+  'devicon-typescript-plain',
+  'devicon-nextjs-original',
+  'devicon-redux-original',
+  'devicon-tailwindcss-plain',
+  'devicon-sass-original'
+]
+
 export default async function ProjectsPage() {
   const projects = await getProjects();
 
@@ -15,6 +28,13 @@ export default async function ProjectsPage() {
     <header className="bg-byzantine-blue text-white pt-10 pb-14 px-6 md:px-20">
       <h1 className="mx-auto text-white text-[27px] text-center md:text-4xl lg:text-[40px] leading-10 font-semibold lg:leading-[70px]">Developer Projects</h1>
       <p className="text-center mx-auto text-lg md:text-xl text-text-blue mt-3 max-w-xl">Explore my innovative and dynamic projects featuring different technologies.</p>
+      <div className="flex justify-center flex-wrap max-w-[600px] mt-4 gap-2 mx-auto">
+        {
+          technologies.map((technology, index) => (
+            <TechnologyIcon key={index} technology={technology} />
+          ))
+        }
+      </div>
     </header>
     <section className="max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8 my-10">
       {projects.map(project => (
