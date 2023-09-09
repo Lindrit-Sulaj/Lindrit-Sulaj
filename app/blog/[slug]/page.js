@@ -51,9 +51,9 @@ export default async function ArticlePage({ params }) {
 
   return (
     <main className="mt-[70px]">
+      <link href={`https://www.lindritsulaj.com/blog/${params.slug}`} rel="canonical" key="canonical" />
       <div className="bg-byzantine-blue">
         <div className="max-w-screen-web mx-auto  pt-10 pb-12 md:pb-20 flex justify-center flex-col items-center px-2 md:px-20 text-white">
-          {/* <p className={`${sourceSans.className} font-semibold tracking-wide uppercase border-solid border-[1px] text-sm md:text-base px-3 py-[6px] border-blue-500`}>{category.title}</p> */}
           <div className="text-center flex gap-2 font-medium text-lg text-blue-300">
             <span>Blog</span>
             <span>/</span>
