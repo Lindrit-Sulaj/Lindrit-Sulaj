@@ -34,7 +34,10 @@ export async function generateMetadata({ params }) {
   return {
     title: article.title,
     description: article.description,
-    keywords: [`${article.title}`]
+    keywords: [`${article.title}`],
+    alternates: {
+      canonical: `https://www.lindritsulaj.com/blog/${article.slug}`
+    }
   }
 }
 
@@ -51,7 +54,6 @@ export default async function ArticlePage({ params }) {
 
   return (
     <main className="mt-[70px]">
-      <link href={`https://www.lindritsulaj.com/blog/${params.slug}`} rel="canonical" key="canonical" />
       <div className="bg-byzantine-blue">
         <div className="max-w-screen-web mx-auto  pt-10 pb-12 md:pb-20 flex justify-center flex-col items-center px-2 md:px-20 text-white">
           <div className="text-center flex gap-2 font-medium text-lg text-blue-300">
