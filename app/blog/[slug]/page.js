@@ -36,7 +36,7 @@ export async function generateMetadata({ params }) {
     description: article.description,
     keywords: [`${article.title}`],
     alternates: {
-      canonical: `https://www.lindritsulaj.com/blog/${article.slug}`
+      canonical: `https://www.lindritsulaj.com/blog/${params.slug}`
     }
   }
 }
